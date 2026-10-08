@@ -1,0 +1,16 @@
+{
+  "name": "Shiny Glow Academy",
+  "short_name": "ShinyGlow",
+  "description": "Professional Beauty & Makeup Courses in Perambur, Chennai",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F0FAF4",
+  "theme_color": "#20BA59",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
