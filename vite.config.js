@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // Enables relative paths for GitHub Pages deployment
+  base: '/shinyglow3/',
   build: {
     outDir: 'dist',
     sourcemap: false,
