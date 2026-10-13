@@ -1,22 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetHelper';
 
 const galleryItems = [
-  { id: 1, title: "South Indian Bridal Makeover", category: "Makeup", tag: "Academy Practical", image: "/assets/WhatsApp Image 2026-10-07 at 11.35.17 PM (1).jpeg" },
-  { id: 2, title: "Trainer & Student Practical Session", category: "Academy", tag: "Live Mentorship", image: "/assets/WhatsApp Image 2026-10-07 at 11.35.15 PM.jpeg" },
-  { id: 3, title: "Traditional Muhurtham Bridal Look", category: "Makeup", tag: "Bridal Artistry", image: "/assets/WhatsApp Image 2026-10-07 at 11.35.16 PM.jpeg" },
-  { id: 4, title: "Bridal Hair Updo & Floral Artistry", category: "Workshops", tag: "Hair Styling", image: "/assets/WhatsApp Image 2026-10-07 at 11.35.17 PM.jpeg" },
-  { id: 5, title: "Close-up HD Eye & Face Makeup", category: "Makeup", tag: "Student Portfolio", image: "/assets/WhatsApp Image 2026-10-07 at 11.35.18 PM.jpeg" },
-  { id: 6, title: "Shiny Plush Luxury Bridal Portrait", category: "Salon", tag: "Shiny Plush Studio", image: "/assets/WhatsApp Image 2026-10-07 at 11.41.19 PM (1).jpeg" },
-  { id: 7, title: "Contemporary South Indian Bridal Look", category: "Makeup", tag: "Master Class", image: "/assets/WhatsApp Image 2026-10-07 at 11.41.21 PM (1).jpeg" },
-  { id: 8, title: "Saree Draping & Pre-pleating Demo", category: "Workshops", tag: "Weekend Workshop", image: "/assets/WhatsApp Image 2026-10-07 at 11.41.21 PM (2).jpeg" },
-  { id: 9, title: "Bharatanatyam Dance Makeup Makeover", category: "Makeup", tag: "Traditional Art", image: "/assets/WhatsApp Image 2026-10-07 at 11.41.23 PM (1).jpeg" },
-  { id: 10, title: "Hair Extension & Updo Styling", category: "Workshops", tag: "Hair Extensions", image: "/assets/WhatsApp Image 2026-10-07 at 11.41.24 PM.jpeg" },
-  { id: 11, title: "Hydra Facial & Cosmetology Therapy", category: "Academy", tag: "Skin Cosmetology", image: "/assets/course_advanced_cosmetology.png" },
-  { id: 12, title: "Professional Gel Nail Art & Extensions", category: "Workshops", tag: "Nail Studio", image: "/assets/service_nail_extensions.png" },
-  { id: 13, title: "Keratin Hair Spa Transformation", category: "Salon", tag: "Hair Treatment", image: "/assets/service_hair_keratin.png" },
-  { id: 14, title: "Foundation Beauty & Facial Hygiene", category: "Academy", tag: "Beginner Course", image: "/assets/course_beauty_basics.png" }
+  { id: 1, title: "South Indian Bridal Makeover", category: "Makeup", tag: "Academy Practical", image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.35.17 PM (1).jpeg") },
+  { id: 2, title: "Trainer & Student Practical Session", category: "Academy", tag: "Live Mentorship", image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.35.15 PM.jpeg") },
+  { id: 3, title: "Traditional Muhurtham Bridal Look", category: "Makeup", tag: "Bridal Artistry", image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.35.16 PM.jpeg") },
+  { id: 4, title: "Bridal Hair Updo & Floral Artistry", category: "Workshops", tag: "Hair Styling", image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.35.17 PM.jpeg") },
+  { id: 5, title: "Close-up HD Eye & Face Makeup", category: "Makeup", tag: "Student Portfolio", image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.35.18 PM.jpeg") },
+  { id: 6, title: "Shiny Plush Luxury Bridal Portrait", category: "Salon", tag: "Shiny Plush Studio", image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.41.19 PM (1).jpeg") },
+  { id: 7, title: "Contemporary South Indian Bridal Look", category: "Makeup", tag: "Master Class", image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.41.21 PM (1).jpeg") },
+  { id: 8, title: "Saree Draping & Pre-pleating Demo", category: "Workshops", tag: "Weekend Workshop", image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.41.21 PM (2).jpeg") },
+  { id: 9, title: "Bharatanatyam Dance Makeup Makeover", category: "Makeup", tag: "Traditional Art", image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.41.23 PM (1).jpeg") },
+  { id: 10, title: "Hair Extension & Updo Styling", category: "Workshops", tag: "Hair Extensions", image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.41.24 PM.jpeg") },
+  { id: 11, title: "Hydra Facial & Cosmetology Therapy", category: "Academy", tag: "Skin Cosmetology", image: getAssetUrl("assets/course_advanced_cosmetology.png") },
+  { id: 12, title: "Professional Gel Nail Art & Extensions", category: "Workshops", tag: "Nail Studio", image: getAssetUrl("assets/service_nail_extensions.png") },
+  { id: 13, title: "Keratin Hair Spa Transformation", category: "Salon", tag: "Hair Treatment", image: getAssetUrl("assets/service_hair_keratin.png") },
+  { id: 14, title: "Foundation Beauty & Facial Hygiene", category: "Academy", tag: "Beginner Course", image: getAssetUrl("assets/course_beauty_basics.png") }
 ];
 
 export const GalleryLightbox = ({ previewOnly = false }) => {

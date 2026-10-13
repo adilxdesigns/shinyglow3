@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { getAssetUrl } from '../utils/assetHelper';
 import { 
   Sparkles, 
   BookOpen, 
@@ -118,7 +119,7 @@ export const HomePage = ({ onOpenEnquire }) => {
 
               <div className="glass-card rounded-3xl p-3 border border-sage-300/80 shadow-hover overflow-hidden relative z-10">
                 <img 
-                  src="/assets/WhatsApp Image 2026-10-07 at 11.35.17 PM (1).jpeg" 
+                  src={getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.35.17 PM (1).jpeg")} 
                   alt="Shiny Glow Academy South Indian Bridal Model" 
                   className="w-full h-80 sm:h-[430px] object-cover object-top rounded-2xl shadow-md"
                 />
@@ -254,14 +255,14 @@ export const HomePage = ({ onOpenEnquire }) => {
                 <div className="rounded-3xl overflow-hidden border border-sage-200/80 shadow-md h-[400px] sm:h-[440px] bg-sage-950 relative group flex items-center justify-center">
                   {/* Ambient Blurred Backdrop */}
                   <img 
-                    src="/assets/WhatsApp Image 2026-10-07 at 11.35.15 PM.jpeg" 
+                    src={getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.35.15 PM.jpeg")} 
                     alt=""
                     aria-hidden="true"
                     className="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-110 pointer-events-none"
                   />
                   {/* Full Uncropped Practical Training Image */}
                   <img 
-                    src="/assets/WhatsApp Image 2026-10-07 at 11.35.15 PM.jpeg" 
+                    src={getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.35.15 PM.jpeg")} 
                     alt="Shiny Glow Practical Training Session"
                     className="relative z-10 max-w-full max-h-full object-contain group-hover:scale-[1.03] transition-transform duration-500 rounded-2xl py-1"
                   />
@@ -346,7 +347,7 @@ export const HomePage = ({ onOpenEnquire }) => {
               <div className="lg:col-span-4">
                 <div className="rounded-2xl overflow-hidden border border-emerald-300/80 shadow-md h-72 relative group">
                   <img 
-                    src="/assets/WhatsApp Image 2026-10-07 at 11.41.19 PM (1).jpeg" 
+                    src={getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.41.19 PM (1).jpeg")} 
                     alt="Shiny Plush Studio Makeover" 
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />

@@ -4,6 +4,8 @@
  * Easily edit business info, courses, workshops, salon services, and FAQs here.
  */
 
+import { getAssetUrl } from '../utils/assetHelper';
+
 export const siteConfig = {
   brand: {
     academyName: "Shiny Glow Academy",
@@ -52,7 +54,7 @@ export const siteConfig = {
       certificate: "Academy Certificate Provided",
       studyMaterialNote: "Complete study materials provided as per course.",
       badge: "Popular Quick Course",
-      image: "/assets/course_beauty_basics.png",
+      image: getAssetUrl("assets/course_beauty_basics.png"),
       description: "Ideal introductory course for aspiring beauticians covering core salon services, hygienic practices, skin prep, threading, and essential facials.",
       syllabus: [
         "Skin structure & facial hygiene basics",
@@ -72,7 +74,7 @@ export const siteConfig = {
       certificate: "Advanced Cosmetology Certification",
       studyMaterialNote: "Study materials & practical demonstration kit guidance provided.",
       badge: "Most In-Demand",
-      image: "/assets/course_advanced_cosmetology.png",
+      image: getAssetUrl("assets/course_advanced_cosmetology.png"),
       description: "Master modern skin treatments, aesthetic cosmetology tools, chemical peels, and anti-aging therapies under expert hands-on supervision.",
       syllabus: [
         "Advanced skin analysis & pore diagnosis",
@@ -93,7 +95,7 @@ export const siteConfig = {
       certificate: "Professional Makeup Artist Certificate",
       studyMaterialNote: "Study materials & product list provided.",
       badge: "Career Focused",
-      image: "/assets/course_professional_makeup.png",
+      image: getAssetUrl("assets/course_professional_makeup.png"),
       description: "Comprehensive makeup artistry program covering bridal, HD, airbrush look techniques, color correction, and portfolio building.",
       syllabus: [
         "Skin prep, color theory & undertone matching",
@@ -114,7 +116,7 @@ export const siteConfig = {
       certificate: "International Accreditation Certificate",
       studyMaterialNote: "Full study materials & practice tools provided as per course.",
       badge: "International Certification",
-      image: "/assets/course_master_diploma.png",
+      image: getAssetUrl("assets/course_master_diploma.png"),
       description: "Our flagship master program combining complete cosmetology, advanced makeup, hair styling, extensions, and salon management training.",
       syllabus: [
         "Complete Cosmetology & Aesthetic Skincare Module",
@@ -134,7 +136,7 @@ export const siteConfig = {
       days: "Saturday & Sunday",
       timings: "11:00 AM to 5:00 PM",
       icon: "Sparkles",
-      image: "/assets/service_nail_extensions.png",
+      image: getAssetUrl("assets/service_nail_extensions.png"),
       highlights: "Acrylic, Gel Overlay, Tip extensions, UV Curing & Nail Art basics."
     },
     {
@@ -143,7 +145,7 @@ export const siteConfig = {
       days: "Saturday & Sunday",
       timings: "11:00 AM to 5:00 PM",
       icon: "Scissors",
-      image: "/assets/ws_hair_extensions.png",
+      image: getAssetUrl("assets/ws_hair_extensions.png"),
       highlights: "Micro-ring, Tape-in & Clip-in application, removal & maintenance."
     },
     {
@@ -152,7 +154,7 @@ export const siteConfig = {
       days: "Saturday & Sunday",
       timings: "11:00 AM to 5:00 PM",
       icon: "Eye",
-      image: "/assets/ws_eyelash_extensions.png",
+      image: getAssetUrl("assets/ws_eyelash_extensions.png"),
       highlights: "Classic 1D, Volume lash techniques, Lash lifting & Tinting procedures."
     },
     {
@@ -161,7 +163,7 @@ export const siteConfig = {
       days: "Saturday & Sunday",
       timings: "11:00 AM to 5:00 PM",
       icon: "Shirt",
-      image: "/assets/WhatsApp Image 2026-10-07 at 11.41.21 PM (2).jpeg",
+      image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.41.21 PM (2).jpeg"),
       highlights: "Silk saree pleating, pinless draping, box packing & quick client setup."
     },
     {
@@ -170,7 +172,7 @@ export const siteConfig = {
       days: "Saturday & Sunday",
       timings: "11:00 AM to 5:00 PM",
       icon: "Flower2",
-      image: "/assets/ws_flower_making.png",
+      image: getAssetUrl("assets/ws_flower_making.png"),
       highlights: "Crafting artificial bridal gajras, floral jewelry & hair accessories."
     },
     {
@@ -179,7 +181,7 @@ export const siteConfig = {
       days: "Saturday & Sunday",
       timings: "11:00 AM to 5:00 PM",
       icon: "Wand2",
-      image: "/assets/WhatsApp Image 2026-10-07 at 11.35.17 PM.jpeg",
+      image: getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.35.17 PM.jpeg"),
       highlights: "Hollywood waves, traditional South Indian braids, & messy updos."
     },
     {
@@ -188,7 +190,7 @@ export const siteConfig = {
       days: "Saturday & Sunday",
       timings: "11:00 AM to 5:00 PM",
       icon: "HeartPulse",
-      image: "/assets/service_hair_keratin.png",
+      image: getAssetUrl("assets/service_hair_keratin.png"),
       highlights: "Scalp analysis, Keratin consultation, Smoothening & Deep hair spa."
     },
     {
@@ -197,7 +199,7 @@ export const siteConfig = {
       days: "Saturday & Sunday",
       timings: "11:00 AM to 5:00 PM",
       icon: "BookOpen",
-      image: "/assets/ws_product_knowledge.png",
+      image: getAssetUrl("assets/ws_product_knowledge.png"),
       highlights: "Ingredient chemistry, skin compatibility, and product curation."
     }
   ],
@@ -236,27 +238,27 @@ export const siteConfig = {
     { 
       title: "Advanced Skincare & Facials", 
       desc: "Hydra facials, collagen boosting, anti-pigmentation, herbal cleanups",
-      image: "/assets/service_skincare_facial.png"
+      image: getAssetUrl("assets/service_skincare_facial.png")
     },
     { 
       title: "Hair Styling & Keratin Care", 
       desc: "Keratin smoothening, hair Botox, trendy haircuts, spa treatments",
-      image: "/assets/service_hair_keratin.png"
+      image: getAssetUrl("assets/service_hair_keratin.png")
     },
     { 
       title: "Bridal & Party Makeovers", 
       desc: "HD bridal makeup, airbrush makeup, saree draping, hair updos",
-      image: "/assets/service_bridal_makeover.png"
+      image: getAssetUrl("assets/service_bridal_makeover.png")
     },
     { 
       title: "Nail Extensions & Art", 
       desc: "Gel extensions, chrome nail art, French manicure, pedicure spa",
-      image: "/assets/service_nail_extensions.png"
+      image: getAssetUrl("assets/service_nail_extensions.png")
     },
     { 
       title: "Thread & Organic Waxing", 
       desc: "Painless wax, brow shaping, full body wax, soothing post-care",
-      image: "/assets/service_waxing_threading.png"
+      image: getAssetUrl("assets/service_waxing_threading.png")
     }
   ],
 

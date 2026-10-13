@@ -1,6 +1,7 @@
 import React from 'react';
 import { Clock, Calendar, Award, Check, Sparkles, ChevronRight, BookOpen, Layers } from 'lucide-react';
 import { PlaceholderImage } from './PlaceholderImage';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export const CourseCard = ({ course, onEnquire }) => {
   return (
@@ -13,14 +14,14 @@ export const CourseCard = ({ course, onEnquire }) => {
             <>
               {/* Ambient Blurred Backdrop */}
               <img 
-                src={course.image} 
+                src={getAssetUrl(course.image)} 
                 alt=""
                 aria-hidden="true"
                 className="absolute inset-0 w-full h-full object-cover blur-xl opacity-45 scale-110 pointer-events-none"
               />
               {/* Main Full Image */}
               <img 
-                src={course.image} 
+                src={getAssetUrl(course.image)} 
                 alt={course.title}
                 className="relative z-10 max-w-full max-h-full object-contain group-hover:scale-[1.03] transition-transform duration-500 rounded-xl"
               />

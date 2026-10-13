@@ -3,6 +3,7 @@ import { siteConfig } from '../data/siteData';
 import { SEO } from '../components/SEO';
 import { PlaceholderImage } from '../components/PlaceholderImage';
 import { Award, BookOpen, Heart, ShieldCheck, Sparkles, Users, CheckCircle2 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export const AboutPage = ({ onOpenEnquire }) => {
   return (
@@ -61,7 +62,7 @@ export const AboutPage = ({ onOpenEnquire }) => {
           <div className="lg:col-span-6">
             <div className="rounded-3xl overflow-hidden border border-sage-200/80 shadow-hover h-80 sm:h-96 relative group">
               <img 
-                src="/assets/WhatsApp Image 2026-10-07 at 11.35.15 PM.jpeg" 
+                src={getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.35.15 PM.jpeg")} 
                 alt="Shiny Glow Trainer & Student Session" 
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
               />

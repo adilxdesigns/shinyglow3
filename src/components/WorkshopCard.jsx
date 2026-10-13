@@ -13,6 +13,7 @@ import {
   ChevronRight 
 } from 'lucide-react';
 import { PlaceholderImage } from './PlaceholderImage';
+import { getAssetUrl } from '../utils/assetHelper';
 
 const iconMap = {
   Sparkles: Sparkles,
@@ -38,14 +39,14 @@ export const WorkshopCard = ({ workshop, onEnquire }) => {
             <>
               {/* Ambient backdrop */}
               <img 
-                src={workshop.image} 
+                src={getAssetUrl(workshop.image)} 
                 alt=""
                 aria-hidden="true"
                 className="absolute inset-0 w-full h-full object-cover blur-lg opacity-40 scale-110 pointer-events-none"
               />
               {/* Full uncropped image */}
               <img 
-                src={workshop.image} 
+                src={getAssetUrl(workshop.image)} 
                 alt={workshop.title}
                 className="relative z-10 max-w-full max-h-full object-contain group-hover:scale-[1.03] transition-transform duration-500 rounded-lg"
               />

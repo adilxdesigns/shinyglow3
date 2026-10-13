@@ -3,6 +3,7 @@ import { siteConfig } from '../data/siteData';
 import { SEO } from '../components/SEO';
 import { PlaceholderImage } from '../components/PlaceholderImage';
 import { Scissors, Sparkles, Clock, MapPin, Phone, Instagram, CheckCircle2, ChevronRight } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetHelper';
 
 export const SalonPage = ({ onOpenEnquire }) => {
   const salonSchema = {
@@ -90,7 +91,7 @@ export const SalonPage = ({ onOpenEnquire }) => {
             <div className="lg:col-span-5 relative">
               <div className="rounded-3xl overflow-hidden border border-gold-400/40 shadow-2xl h-80 sm:h-96 relative group">
                 <img 
-                  src="/assets/WhatsApp Image 2026-10-07 at 11.41.19 PM (1).jpeg" 
+                  src={getAssetUrl("assets/WhatsApp Image 2026-10-07 at 11.41.19 PM (1).jpeg")} 
                   alt="Shiny Plush Studio Makeover" 
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
@@ -122,13 +123,13 @@ export const SalonPage = ({ onOpenEnquire }) => {
                 <div>
                   <div className="h-48 overflow-hidden relative bg-sage-950 flex items-center justify-center">
                     <img 
-                      src={service.image} 
+                      src={getAssetUrl(service.image)} 
                       alt="" 
                       aria-hidden="true"
                       className="absolute inset-0 w-full h-full object-cover blur-lg opacity-40 scale-110 pointer-events-none"
                     />
                     <img 
-                      src={service.image} 
+                      src={getAssetUrl(service.image)} 
                       alt={service.title}
                       className="relative z-10 max-w-full max-h-full object-contain group-hover:scale-[1.03] transition-transform duration-500 rounded-lg py-1"
                     />
