@@ -140,14 +140,27 @@ export const HomePage = ({ onOpenEnquire }) => {
         </section>
 
         {/* HIGHLIGHTS STRIP */}
-        <section className="bg-gradient-to-r from-sage-800 via-sage-700 to-sage-800 text-white py-10 px-4 sm:px-6 shadow-md">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <section className="bg-gradient-to-r from-sage-950 via-sage-900 to-sage-950 text-white py-12 px-4 sm:px-6 shadow-xl border-y border-gold-500/30 relative overflow-hidden">
+          {/* Subtle ambient lighting */}
+          <div className="absolute top-0 left-1/4 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
             {siteConfig.highlightsStrip.map((item, idx) => (
-              <div key={idx} className="flex items-start space-x-3.5 bg-white/10 p-4 rounded-2xl backdrop-blur-xs border border-white/10">
-                <CheckCircle2 className="w-6 h-6 text-sage-300 shrink-0 mt-0.5" />
+              <div 
+                key={idx} 
+                className="group flex items-start space-x-4 bg-white/[0.07] hover:bg-white/[0.12] p-5 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-gold-400/50 border-l-2 border-l-gold-400/80 transition-all duration-300 shadow-sm"
+              >
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-300" />
+                </div>
                 <div>
-                  <h4 className="font-serif text-base font-bold leading-tight">{item.text}</h4>
-                  <p className="text-xs text-sage-100/80 mt-1">{item.desc}</p>
+                  <h4 className="font-serif text-base font-bold text-white leading-tight group-hover:text-gold-200 transition-colors">
+                    {item.text}
+                  </h4>
+                  <p className="text-xs text-sage-200 mt-1.5 leading-relaxed font-normal">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -369,36 +382,50 @@ export const HomePage = ({ onOpenEnquire }) => {
           </div>
         </section>
 
-        {/* TESTIMONIALS PLACEHOLDER */}
-        <section className="bg-sage-50/70 py-16 px-4 sm:px-6 border-y border-sage-200/60">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center max-w-xl mx-auto mb-12 space-y-2">
-              <span className="text-xs font-semibold text-sage-800 uppercase tracking-wider bg-white px-3.5 py-1 rounded-full border border-sage-200">
+        {/* TESTIMONIALS SECTION (Dark luxury aesthetic for visual rhythm) */}
+        <section className="bg-gradient-to-b from-sage-950 via-sage-900 to-sage-950 text-white py-20 px-4 sm:px-6 border-y border-gold-500/20 relative overflow-hidden">
+          {/* Subtle ambient lighting */}
+          <div className="absolute top-1/4 right-10 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center max-w-xl mx-auto mb-14 space-y-3">
+              <span className="text-xs font-bold text-gold-300 uppercase tracking-widest bg-gold-500/15 px-4 py-1.5 rounded-full border border-gold-400/30">
                 Student Testimonials
               </span>
-              <h2 className="font-serif text-3xl font-bold text-sage-900">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white tracking-tight">
                 What Our Graduates Say
               </h2>
+              <p className="text-xs sm:text-sm text-sage-200 font-normal">
+                Real feedback from graduates who started their beauty and salon careers with us.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {siteConfig.testimonials.map((t, idx) => (
-                <div key={idx} className="glass-card p-6 rounded-3xl border border-sage-200 shadow-card flex flex-col justify-between">
+                <div 
+                  key={idx} 
+                  className="bg-white/[0.06] hover:bg-white/[0.09] p-7 rounded-3xl border border-white/10 hover:border-gold-400/40 shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1"
+                >
                   <div>
-                    <div className="flex text-amber-400 space-x-1 mb-3">
+                    <div className="flex text-amber-400 space-x-1 mb-4">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-amber-400" />
                       ))}
                     </div>
-                    <p className="text-xs sm:text-sm text-slate-muted italic leading-relaxed mb-4">
+                    <p className="text-xs sm:text-sm text-white/90 italic leading-relaxed mb-6 font-normal">
                       "{t.comment}"
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-sage-100">
-                    <h4 className="font-serif text-sm font-bold text-sage-900">{t.name}</h4>
-                    <p className="text-[11px] text-sage-700 font-medium">{t.role}</p>
-                    <p className="text-[10px] text-slate-muted">{t.location}</p>
+                  <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                    <div>
+                      <h4 className="font-serif text-sm font-bold text-white">{t.name}</h4>
+                      <p className="text-[11px] text-gold-400 font-medium">{t.role}</p>
+                    </div>
+                    <span className="text-[10px] text-sage-300 bg-white/10 px-2.5 py-1 rounded-full">
+                      {t.location}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -520,23 +547,27 @@ export const HomePage = ({ onOpenEnquire }) => {
 
         {/* FINAL CTA */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-gradient-to-r from-sage-900 via-sage-800 to-sage-900 text-white rounded-3xl p-8 sm:p-14 text-center space-y-6 shadow-2xl relative overflow-hidden">
-            <div className="space-y-3 max-w-2xl mx-auto">
-              <span className="text-xs font-semibold text-sage-200 uppercase tracking-widest bg-white/10 px-4 py-1 rounded-full border border-white/10">
+          <div className="bg-gradient-to-br from-sage-950 via-sage-900 to-emerald-950 text-white rounded-4xl p-8 sm:p-14 text-center space-y-6 shadow-2xl border border-gold-500/30 relative overflow-hidden">
+            {/* Background Ambient Glows */}
+            <div className="absolute top-0 right-10 w-80 h-80 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-10 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="space-y-4 max-w-2xl mx-auto relative z-10">
+              <span className="inline-block text-xs font-bold text-gold-300 uppercase tracking-widest bg-gold-500/20 px-4 py-1.5 rounded-full border border-gold-400/40 shadow-xs">
                 Admissions Open for Next Batch
               </span>
-              <h2 className="font-serif text-3xl sm:text-5xl font-extrabold leading-tight">
-                Ready to Become a Certified Beauty Professional?
+              <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-white leading-tight tracking-tight">
+                Ready to Become a <span className="text-gradient-gold-bright">Certified Beauty Professional?</span>
               </h2>
-              <p className="text-xs sm:text-sm text-sage-100/90 leading-relaxed">
+              <p className="text-xs sm:text-sm text-sage-100 leading-relaxed font-normal">
                 Join Shiny Glow Academy in Perambur, Chennai today. Limited seats per batch for personalized attention.
               </p>
             </div>
 
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
               <button
                 onClick={() => onOpenEnquire('3-Month Master Diploma')}
-                className="w-full sm:w-auto bg-[#20BA59] hover:bg-[#1A9D49] text-white font-semibold text-sm px-8 py-4 rounded-2xl shadow-lg transition-all flex items-center justify-center space-x-2"
+                className="w-full sm:w-auto bg-[#20BA59] hover:bg-[#1A9D49] text-white font-bold text-sm px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center space-x-2 transform hover:-translate-y-0.5"
               >
                 <Sparkles className="w-4 h-4 fill-white" />
                 <span>Enquire Admission via WhatsApp</span>
@@ -544,9 +575,9 @@ export const HomePage = ({ onOpenEnquire }) => {
 
               <a
                 href={`tel:+${siteConfig.contact.phoneRaw}`}
-                className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-8 py-4 rounded-2xl border border-white/20 transition-all flex items-center justify-center space-x-2"
+                className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-8 py-4 rounded-2xl border border-white/20 transition-all flex items-center justify-center space-x-2 backdrop-blur-xs"
               >
-                <Phone className="w-4 h-4 text-sage-200" />
+                <Phone className="w-4 h-4 text-gold-300" />
                 <span>Call: {siteConfig.contact.phoneFormatted}</span>
               </a>
             </div>

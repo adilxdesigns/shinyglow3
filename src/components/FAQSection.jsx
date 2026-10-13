@@ -56,16 +56,23 @@ export const FAQSection = ({ onOpenEnquire }) => {
         </div>
 
         {/* CTA Banner */}
-        <div className="mt-10 bg-gradient-to-r from-sage-800 to-sage-700 text-white p-6 sm:p-8 rounded-3xl shadow-soft flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div>
-            <h4 className="font-serif text-lg font-bold">Have a specific question about fee installments or batch dates?</h4>
-            <p className="text-xs text-sage-200 mt-1">Chat directly with our admissions counselor on WhatsApp.</p>
+        <div className="mt-10 bg-gradient-to-r from-sage-950 via-sage-900 to-sage-950 text-white p-6 sm:p-8 rounded-3xl shadow-hover border border-gold-500/30 relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+          {/* Subtle ambient light */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/10 rounded-full blur-2xl pointer-events-none" />
+          
+          <div className="relative z-10">
+            <h4 className="font-serif text-lg sm:text-xl font-bold text-white tracking-normal leading-snug">
+              Have a specific question about fee installments or batch dates?
+            </h4>
+            <p className="text-xs sm:text-sm text-sage-200 mt-1.5 font-normal">
+              Chat directly with our admissions counselor on WhatsApp.
+            </p>
           </div>
           <button
             onClick={() => onOpenEnquire('General Academy Enquiry')}
-            className="bg-white text-sage-900 hover:bg-sage-100 font-semibold text-xs sm:text-sm px-6 py-3 rounded-2xl shadow-md transition-all shrink-0 flex items-center space-x-2"
+            className="relative z-10 bg-white hover:bg-gold-50 text-sage-950 font-bold text-xs sm:text-sm px-6 py-3.5 rounded-2xl shadow-md hover:shadow-lg transition-all shrink-0 flex items-center justify-center space-x-2 border border-gold-300/50 transform hover:-translate-y-0.5"
           >
-            <Sparkles className="w-4 h-4 text-sage-700" />
+            <Sparkles className="w-4 h-4 text-gold-600" />
             <span>Ask Admissions Team</span>
           </button>
         </div>

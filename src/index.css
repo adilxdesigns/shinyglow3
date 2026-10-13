@@ -13,7 +13,8 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight text-slate-800;
+    @apply font-serif tracking-tight;
+    color: inherit;
   }
 }
 
@@ -23,6 +24,13 @@
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid rgba(216, 243, 227, 0.7);
+  }
+
+  .glass-card-dark {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
   
   .glass-header {
@@ -38,6 +46,10 @@
 
   .text-gradient-gold {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-600 via-gold-500 to-amber-700;
+  }
+
+  .text-gradient-gold-bright {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-300 via-amber-200 to-gold-400;
   }
 
   .gold-border {

@@ -75,22 +75,23 @@ export const CoursesPage = ({ onOpenEnquire }) => {
         </div>
 
         {/* Enrollment & Materials Notice Banner */}
-        <div className="bg-gradient-to-r from-sage-800 to-sage-700 text-white rounded-3xl p-8 shadow-soft grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-          <div className="md:col-span-8 space-y-2">
-            <h3 className="font-serif text-2xl font-bold flex items-center space-x-2">
-              <BookOpen className="w-6 h-6 text-sage-300" />
+        <div className="bg-gradient-to-r from-sage-950 via-sage-900 to-sage-950 text-white rounded-3xl p-8 sm:p-10 shadow-hover border border-gold-500/30 grid grid-cols-1 md:grid-cols-12 gap-6 items-center relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/10 rounded-full blur-2xl pointer-events-none" />
+          <div className="md:col-span-8 space-y-2 relative z-10">
+            <h3 className="font-serif text-2xl font-bold text-white flex items-center space-x-2.5">
+              <BookOpen className="w-6 h-6 text-gold-400" />
               <span>Study Materials & Practice Kits</span>
             </h3>
-            <p className="text-xs sm:text-sm text-sage-100/90 leading-relaxed">
+            <p className="text-xs sm:text-sm text-sage-200 leading-relaxed font-normal">
               Every course student receives structured curriculum notes and guidance on professional beauty toolkits. Flexible fee payment options available.
             </p>
           </div>
-          <div className="md:col-span-4 text-right">
+          <div className="md:col-span-4 text-right relative z-10">
             <button
               onClick={() => onOpenEnquire('General Academy Enquiry')}
-              className="w-full bg-white hover:bg-sage-50 text-sage-900 font-semibold text-xs sm:text-sm py-3 px-6 rounded-2xl shadow-md transition-all flex items-center justify-center space-x-2"
+              className="w-full bg-white hover:bg-gold-50 text-sage-950 font-bold text-xs sm:text-sm py-3.5 px-6 rounded-2xl shadow-md hover:shadow-lg transition-all flex items-center justify-center space-x-2 border border-gold-300/40 transform hover:-translate-y-0.5"
             >
-              <Sparkles className="w-4 h-4 text-sage-700" />
+              <Sparkles className="w-4 h-4 text-gold-600" />
               <span>Enquire Admission Details</span>
             </button>
           </div>

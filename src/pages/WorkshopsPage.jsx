@@ -54,18 +54,23 @@ export const WorkshopsPage = ({ onOpenEnquire }) => {
         </div>
 
         {/* Workshop Bottom Banner */}
-        <div className="bg-gradient-to-r from-sage-900 to-sage-800 text-white rounded-3xl p-8 text-center space-y-4 shadow-soft">
-          <h3 className="font-serif text-2xl font-bold">Want to book multiple weekend workshops?</h3>
-          <p className="text-xs sm:text-sm text-sage-200 max-w-xl mx-auto">
+        <div className="bg-gradient-to-r from-sage-950 via-sage-900 to-sage-950 text-white rounded-3xl p-8 sm:p-10 text-center space-y-4 shadow-hover border border-gold-500/30 relative overflow-hidden">
+          <div className="absolute top-0 right-1/4 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white relative z-10">
+            Want to book multiple weekend workshops?
+          </h3>
+          <p className="text-xs sm:text-sm text-sage-200 max-w-xl mx-auto relative z-10 font-normal">
             Combo discounts available for students enrolling in 2 or more weekend workshops. Contact our coordinator to reserve your desk.
           </p>
-          <button
-            onClick={() => onOpenEnquire('Weekend Workshop Combo Enquiry')}
-            className="bg-[#20BA59] hover:bg-[#1A9D49] text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-2xl shadow-md transition-all inline-flex items-center space-x-2"
-          >
-            <Sparkles className="w-4 h-4 fill-white" />
-            <span>Enquire Workshop Combo via WhatsApp</span>
-          </button>
+          <div className="pt-2 relative z-10">
+            <button
+              onClick={() => onOpenEnquire('Weekend Workshop Combo Enquiry')}
+              className="bg-[#20BA59] hover:bg-[#1A9D49] text-white font-bold text-xs sm:text-sm px-7 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all inline-flex items-center space-x-2 transform hover:-translate-y-0.5"
+            >
+              <Sparkles className="w-4 h-4 fill-white" />
+              <span>Enquire Workshop Combo via WhatsApp</span>
+            </button>
+          </div>
         </div>
 
       </div>

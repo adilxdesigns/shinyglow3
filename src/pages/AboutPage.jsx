@@ -109,18 +109,23 @@ export const AboutPage = ({ onOpenEnquire }) => {
         </div>
 
         {/* CTA */}
-        <div className="bg-gradient-to-r from-sage-800 to-sage-700 text-white rounded-3xl p-8 text-center space-y-4">
-          <h3 className="font-serif text-2xl font-bold">Ready to Visit Our Perambur Academy?</h3>
-          <p className="text-xs sm:text-sm text-sage-100 max-w-lg mx-auto">
+        <div className="bg-gradient-to-r from-sage-950 via-sage-900 to-sage-950 text-white rounded-3xl p-8 sm:p-10 text-center space-y-4 shadow-hover border border-gold-500/30 relative overflow-hidden">
+          <div className="absolute top-0 right-1/4 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white relative z-10">
+            Ready to Visit Our Perambur Academy?
+          </h3>
+          <p className="text-xs sm:text-sm text-sage-200 max-w-lg mx-auto relative z-10 font-normal">
             Schedule a free counseling session and live classroom demo with our head instructor.
           </p>
-          <button
-            onClick={() => onOpenEnquire('Academy Visit & Counseling')}
-            className="bg-white text-sage-900 hover:bg-sage-50 font-semibold text-xs sm:text-sm px-7 py-3.5 rounded-2xl shadow-md transition-all inline-flex items-center space-x-2"
-          >
-            <Sparkles className="w-4 h-4 text-sage-700" />
-            <span>Book Campus Demo on WhatsApp</span>
-          </button>
+          <div className="pt-2 relative z-10">
+            <button
+              onClick={() => onOpenEnquire('Academy Visit & Counseling')}
+              className="bg-white text-sage-950 hover:bg-gold-50 font-bold text-xs sm:text-sm px-7 py-3.5 rounded-2xl shadow-md hover:shadow-lg transition-all inline-flex items-center space-x-2 border border-gold-300/40 transform hover:-translate-y-0.5"
+            >
+              <Sparkles className="w-4 h-4 text-gold-600" />
+              <span>Book Campus Demo on WhatsApp</span>
+            </button>
+          </div>
         </div>
 
       </div>
